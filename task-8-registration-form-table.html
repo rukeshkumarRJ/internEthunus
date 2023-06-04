@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <style>
+            button{
+                text-align: center;
+            }
+            textarea,input.textalone{
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Registration form
+        </h1><form>
+        <table border="1px">
+            <tr>
+                <td>Full Name:</td>
+                <td>
+                    <input class="textalone" type="text" name="fname"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td>
+                    <input type="text" name="lname"class="textalone"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <input type="text" name="mail"class="textalone"/>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input type="password" name="pwd"class="textalone"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Re-enter Password:</td>
+                <td>
+                    <input type="password" name="re-pwd" class="textalone"/>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">Gender</td>
+                <td><input type="radio" name="gender" value="Male">Male</input></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="gender" value="Female">Female</input></td>
+            </tr>
+            
+            <tr>
+                <td>Age:</td>
+                <td>
+                    <input type="text" name="Age" class="textalone"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Phone number:</td>
+                <td>
+                    <input type="text" name="mob.no" class="textalone"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea name="Address" class="textalone"></textarea></td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td><input type="text" name="State"/ class="textalone"></td>
+            </tr>
+            <tr>
+                <td>Country:</td>
+                <td>
+                    <select name="country" dropdown>
+                        <option>choose your country</option>
+                        <option value="india">India</option>
+                        <option value="bangldesh">Bangladesh</option>
+                        <option value="srilanka">Sri lanka</option>
+                        <option value="nepal">Nepal</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Languages known:</td>
+                <td>
+                    <input type="checkbox" name="Languages" value="English">English</input>
+                    <input type="checkbox" name="Languages" value="Tamil"/>Tamil</input>
+                    <input type="checkbox" name="Languages" value="Telugu"/>Telugu</input>
+                    <input type="checkbox" name="Languages" value="Bengali"/>Bengali</input>
+                    <input type="checkbox" name="Languages" value="Hindi"/>Hindi</input>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="checkbox" name="permit" value="yes" checked>HereBy I declare all the given details are true</input></td>
+            </tr>
+        </table><br/>
+        <button type="submit" name="Save">Register</button>
+        </form>
+    </body>
+</html>
