@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+            div{
+                margin-top: 10%;
+                margin-left: 10%;
+                font-size: x-large;
+            }  
+            button{
+                font-size: x-large;
+            }
+            </style>
+    </head>
+    <body>
+        
+        <div>
+            <button onclick="func1()">show date</button>
+            <p id="datefunc"></p><br/>
+            <br/><br/><br/>
+            <button onclick="func2()">show Time</button>
+            <p id="timefunc"></p>
+        </div>
+        <script>
+            
+            const d=new Date();
+            function func1(){
+            var day=d.getDate();
+            var monthIndex =d.getMonth();
+            var year=d.getFullYear();
+            var monthNames = [
+            "January", "February", "March", "April", "May", "June", "July",
+            "August", "September", "October", "November", "December"
+            ];
+
+            var formattedDate = day + "/" + monthNames[monthIndex] + "/" + year;
+
+        document.getElementById("datefunc").innerHTML=formattedDate;
+            }
+            function func2(){
+        document.getElementById("timefunc").innerHTML=d;
+            }
+        </script>
+    </body>
+</html>
