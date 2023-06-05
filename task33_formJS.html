@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js-task-3</title>
+        <style>
+            input,textarea{
+                border-color:rgb(255, 0, 0);
+                border-width: 2px;
+            }
+        </style>
+        <script type="text/javascript">
+            function validate()
+            {
+               var name=document.getElementById("name").value;
+               var email=document.getElementById("email").value;
+               var website=document.getElementById("web").value;
+               var message=document.getElementById("msg").value;
+
+               if(name.trim()=="")
+               {
+                   document.getElementById("nameError").textContent="This field is required";
+                   
+               }
+
+               function validateEmail(email) {
+                    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailPattern.test(email);
+                }
+                if (!validateEmail(email)) {
+                    document.getElementById("emailError").textContent = "A valid email address is required";
+                }
+
+                if(website.trim()=="")
+                {
+                    document.getElementById("webError").textContent="A valid url is required";
+                }
+                if(message.trim()=="")
+                {
+                    document.getElementById("messageError").textContent="This field is required";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return(validate())" action="#">
+            <table>
+                <tr>
+                    <th>Name:</th>
+                    <td><input type="text" id="name"></td>
+                    <td><span id="nameError" style="color:red;"></span></td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td><input type="email" id="email"></td>
+                    <td><span id="emailError" style="color:red;"></span></td>
+                    
+                </tr>
+                <tr>
+                    <th>Website:</th>
+                    <td><input type="text" id="web"></td>
+                    <td><span id="webError" style="color:red;"></span></td>
+                </tr>
+                <tr>
+                    <th>Message:</th>
+                    <td><textarea id="msg" rows="6" cols="23"></textarea></td>
+                    <td><span id="messageError" style="color:red;"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button onclick="validate()" type="submit">Submit</button></td>
+                    
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

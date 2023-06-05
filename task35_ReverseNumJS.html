@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large;
+            
+        }
+        body{
+            margin: 10% 30% 10% 30% ;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse number</title>
+</head>
+<body>
+    <h3>Enter the Number:</h3>
+    <input type="text" id="numid" name="num"/><br/><br/>
+    <button onclick="f1()">Reverse</button><br/><br/>
+    <h2 id="resid"></h2>
+    <script>
+        function f1(){
+            var num=Number(document.getElementById('numid').value);
+        
+                var str=String(num);
+                var len=str.length;
+                var revStr="";
+                for(let i=0;i<len;i++){
+                revStr+=str.charAt(len-1-i);
+            }
+            
+
+           
+            document.getElementById('resid').innerHTML="Reversed Number: "+revStr;
+        }
+    </script>
+</body>
+</html>

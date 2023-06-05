@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <!--<div>
+        <h3>concat method:</h3>
+        <p id="concat1"></p>
+        <h3>copyWithin: method:</h3>
+        <p id="copy1"></p>
+        <h3>map method:</h3>
+        <p id="map1"></p>
+        <h3>every method:</h3>
+        <p id="eve1"></p>
+        <h3>some method:</h3>
+        <p id="some1"></p>
+        <h3>filter method:</h3>
+        <p id="fltr1"></p>
+        <h3>find method:</h3>
+        <p id="find1"></p>
+        <h3>findIndex method:</h3>
+        <p id="findx1"></p>
+        <h3>indexOf method:</h3>
+        <p id="ind1"></p>
+        <h3>last IndexOf method:</h3>
+        <p id="lind1"></p>
+        <h3>push method:</h3>
+        <p id="concat1"></p>
+        <h3>pop method:</h3>
+        <p id="concat1"></p>
+        <h3>shift method:</h3>
+        <p id="concat1"></p>
+    </div>-->
+    <script>
+        const arr1=[10,20,30];
+        const arr2=[40,50,60];
+        const arr=arr1.concat(arr2);
+        console.log("concate method");
+        console.log(arr);
+        arr.copyWithin(3,0,3);
+        console.log("copyWithin method");
+        console.log(arr);
+        console.log("Map method")
+        arr.map(function(val){
+            console.log(val)
+        })
+        console.log("Every method");
+        console.log(arr.every((val)=>val>20));
+        console.log("Some method");
+        console.log(arr.some(function(val){
+            return val>20;
+        }));
+        console.log("Filter method");
+        console.log(arr.filter(function(val){
+            return val>=20;
+        }));
+        console.log("Find method");
+        console.log(arr.find((val)=>val==20));
+
+        console.log("Find index method");
+        console.log(arr.findIndex((val)=>val==20));
+
+        console.log("IndexOf method");
+        console.log(arr.indexOf(20));
+
+        console.log("lastIndexOf method");
+        console.log(arr.lastIndexOf(20));
+
+        console.log("push method");
+        arr.push(60);
+        console.log(arr);
+
+        console.log("pop method")
+        arr.pop();
+        console.log(arr);
+
+        console.log("shift method");
+        arr.shift();
+        console.log(arr);
+
+    </script>
+</body>
+</html>

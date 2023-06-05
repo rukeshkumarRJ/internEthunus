@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large;
+            
+        }
+        body{
+            margin: 10% 30% 10% 30% ;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aphabetically order the string</title>
+</head>
+<body>
+    <h3>Enter a String:</h3>
+    <input type="text" id="strid" name="str"/><br/><br/>
+    <button onclick="f1()">Alphabetical order:</button><br/><br/>
+    <p>Alphabetically ordered String: </p>
+    <h2 id="resid"></h2>
+    <script>
+        function f1(){
+            var str=document.getElementById('strid').value;
+            var arr=str.split("");
+            arr.sort();
+            var resStr="";
+            for(let i=0;i<arr.length;i++){
+                resStr+=arr[i];
+            }
+            document.getElementById('resid').innerHTML=resStr;
+        }
+    </script>
+</body>
+</html>
